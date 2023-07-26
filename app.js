@@ -14,9 +14,14 @@ app.get("/", (req, res) => {
   res.send("Welcome to Bookmarks App");
 });
 
+
 // Bookmarks ROUTES
 const bookmarksController = require("./controllers/bookmarkController.js");
 app.use("/bookmarks", bookmarksController);
+
+// // Reviews ROUTES
+// const reviewsController = require("./controllers/reviewsController.js");
+// app.use("/reviews", reviewsController);
 
 // 404 PAGE
 app.get("*", (req, res) => {
